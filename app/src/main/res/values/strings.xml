@@ -2,4 +2,5 @@
     <string name="app_name">Calculando Imc</string>
     <string name="massage">IMC !</string>
     <string name="massage_classificaçao">classificaçao: %1$s! </string>
+    <string name="app_name_tela_inicial">Calcular IMC</string>
 </resources>

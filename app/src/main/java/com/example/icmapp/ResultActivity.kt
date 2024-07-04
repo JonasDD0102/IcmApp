@@ -25,21 +25,18 @@ class ResultActivity : AppCompatActivity() {
         tvFinal.text = result.toString()
 
 
+       val imc = when{
+           result < 18.5f -> "Abaio do peso"
+           result in  18.5f .. 24.9f -> "Peso normal"
+           result in 25.0f ..  29.9f -> "Sobrepeso"
+           result in 30.0f .. 34.9f -> "obesidade classe I"
+           result in 35.0f .. 39.9f -> "obesidade classe II"
+           else -> "obesidade classe III"
 
-
-       val imc =  if (result < 18.5f){
-             "ABAIXO DO PESO"
-        }else if (result in 18.5f .. 24.9f ){
-             "NORMAL"
-        }else if (result in 25.0f .. 29.9f){
-             "SOBREPESO"
-        }else if (result in 30.0f .. 39.9f){
-             "OBESIDADE"
-        }else  {
-             " OBESIDADE GRAVE"}
+       }
 
         tVclassificaçao.text = getString(R.string.massage_classificaçao, imc )
-
+        
         }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
